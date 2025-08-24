@@ -1,0 +1,19 @@
+/* 1. Hide character and word counters */
+.jodit-status-bar__item-right span {
+  display: none !important;
+}
+
+/* 2. Change "Powered by Jodit" to "Powered by Hsas" without link */
+.jodit-status-bar__item-right a.jodit-status-bar-link[href*="jodit"] {
+  pointer-events: none; /* Disable clicking */
+  cursor: default; /* Normal cursor, no link hand */
+  font-size: 0; /* Hide original text */
+  color: #555 !important;
+  text-decoration: none;
+}
+
+/* Inject our new text */
+.jodit-status-bar__item-right a.jodit-status-bar-link[href*="jodit"]::after {
+  content: "Powered by Hsas";
+  font-size: 12px;
+}

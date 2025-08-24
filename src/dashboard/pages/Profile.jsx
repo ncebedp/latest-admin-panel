@@ -1,0 +1,44 @@
+import React from 'react';
+import { FaImage } from 'react-icons/fa';
+
+const Profile = () => {
+    return (
+        <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-2 mt-5'>
+            <div className='bg-white p-6 rounded-lg flex items-center shadow-md'>
+                <div className='flex-shrink-0'>
+                    <label htmlFor="img" className='w-[150px] h-[150px] flex flex-col justify-center items-center rounded-full bg-gray-200 border-2 border-dashed border-gray-300 text-gray-600 cursor-pointer hover:bg-green-200 transition duration-300'>
+                        <FaImage  className='text-4xl'/>
+                    <span className='mt-2'>Select Image</span>
+                    </label>
+                    <input type="file" id='img' className='hidden'/>
+                </div>
+                <div className='ml-6 text-gray-700 flex flex-col space-y-2'>
+                    <h3 className='text-xl font-bold'>Suheb Ali</h3>
+                    <p className='text-sm'>Email: <span className='text-gray-600'>suheb@gmail.com</span></p>
+                    <p className='text-sm'>Category: <span className='text-gray-600'>Eduction</span></p>
+                </div>
+            </div>
+            <div className='bg-white text-gray-700 p-6 rounded-lg  shadow-md'>
+                <h2 className='text-lg font-bold text-center mb-5'> Change Password</h2>
+                <form>
+                    <div className='space-y-4'>
+                        <div>
+                        <label htmlFor="old_password" className='block text-md font-semibold text-gray-600'>Old Password</label>
+                        <input type="password" id='old_password' className='w-full px-3 py-2 mt-2 border border-gray-400 rounded-md  focus:ring-2 focus:ring-blue-500 outline-none transition duration-300' placeholder='Enter old password' name='old_passowrd' required />
+                    </div>
+                        <div>
+                        <label htmlFor="new_password" className='block text-md font-semibold text-gray-600'>New Password</label>
+                        <input type="password" id='new_password' className='w-full px-3 py-2 mt-2 border border-gray-400 rounded-md  focus:ring-2 focus:ring-blue-500 outline-none transition duration-300' placeholder='Enter old password' name='new_passowrd' required />
+                    </div>
+                    </div>
+                </form>
+                <div className='mt-6'>
+                    <button type='submit' className='w-full px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-800 transition duration-300'>Change Password</button>
+                </div>
+
+            </div>
+        </div>
+    );
+};
+
+export default Profile;
